@@ -97,7 +97,7 @@ button {
   max-width: min(42ch, 100%);
   overflow-wrap: anywhere;
   color: #bce8ff;
-  font-size: clamp(1rem, 3vh, 2rem);
+  font-size: clamp(3.2rem, 10vh, 7.25rem);
   font-weight: 650;
   line-height: 1.2;
 }
