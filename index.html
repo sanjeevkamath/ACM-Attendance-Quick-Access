@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Show the UF ACM attendance QR code at your event.">
+  <title>UF ACM Attendance</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="check-in.js" defer></script>
+</head>
+<body>
+  <main>
+    <section id="setup" class="setup" aria-labelledby="setup-heading">
+      <h1 id="setup-heading">ACM Attendance</h1>
+      <form id="event-form">
+        <label for="event-name">Event name <span>(optional)</span></label>
+        <input id="event-name" type="text" maxlength="120" placeholder="e.g. General Body Meeting">
+        <button class="proceed" type="submit">Proceed <span aria-hidden="true">→</span></button>
+      </form>
+      <noscript><p><a href="https://checkin.uf-acm.org/acm/checkin">Open the attendance page</a></p></noscript>
+    </section>
+    <section id="display" class="display" aria-labelledby="display-heading" hidden>
+      <p id="event-title" class="event-title" hidden></p>
+      <h1 id="display-heading" tabindex="-1">Check in</h1>
+      <img class="qr" src="assets/acm-checkin-qr.png" width="1080" height="1080" alt="Scan this QR code to check in for UF ACM attendance.">
+      <a class="check-in-link" href="https://checkin.uf-acm.org/acm/checkin">checkin.uf-acm.org/acm/checkin</a>
+    </section>
+  </main>
+  <footer>
+    <img class="logo" src="assets/acm_logo.png" width="800" height="240" alt="UF ACM">
+    <button type="button" class="back" id="edit-event" hidden><span aria-hidden="true">←</span> Back</button>
+  </footer>
+</body>
+</html>
